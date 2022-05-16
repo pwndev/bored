@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLOR DRAG</title>
+  </head>
+  <body style="align-items: center; display: flex; justify-content: center; margin: 0; min-height: 100vh">
+    <noscript>
+      <h2>Enable Javascript for this to work</h2>
+    </noscript>
+    <input type="range" id="range-input" style="display: none" />
+    <script>
+      const rangeInput = document.getElementById('range-input');
+      rangeInput.style.display = 'block';
+
+      rangeInput.addEventListener('change', ({ target: { value } }) => {
+        document.body.style.backgroundColor = `hsl(${1.38 * value}, 83.6%, 52.2%)`;
+      });
+
+      rangeInput.value = Math.floor(Math.random() * 100);
+      rangeInput.dispatchEvent(new Event('change'));
+    </script>
+  </body>
+</html>

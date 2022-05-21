@@ -6,4 +6,4 @@
 ### Rules
 
 - Only single files per "useless feature"
-- Don't break TOS
+- Break TOS
